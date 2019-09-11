@@ -1,0 +1,18 @@
+{
+  "name": "Like Likers",
+  "version": "1.0",
+  "description": "Like the posts of a specified post likers",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/p/*"],
+      "js": ["arrive.min.js", "content_script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {}
+}
